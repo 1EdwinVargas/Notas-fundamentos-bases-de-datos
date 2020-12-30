@@ -1719,6 +1719,16 @@ Creamos la coleccion posts
 
 ![colecciones_vs_subcolecciones_6](src/colecciones_vs_subcolecciones_6.png)
 
+
+Un top level collection se utilizaria para relaciones de tipo “agregacion”. Mientras que una sub collection se utilizaria para relaciones tipo “composicion”.
+
+Por ejemplo:
+
+Tenemos Estudiantes, Cursos y Notas. Los estudiantes tiene cursos y los cursos tiene estudiantes. Si se elimina un curso los estudiantes no deben ser eliminados. Lo mismo si se elimina un estudiante los cursos no deben ser elimiandos. Esto es una relacion de agregacion. Aqui se usaria top level collection para estudiantes y cursos.
+
+Los estudiantes tienen notas y las notas pertenecen a un estudiante. Si se elimina un estudiante, tiene sentido eliminar las notas. Esto es una relacion de composicion. Aqui se usarian las subcollections. El estudiante tendría una subcollection de notas.
+
+
 ### Clase 46 Recreando Platziblog
 
 Firestore, es una base de datos basada en documentos, pensada en lo siguiente:
